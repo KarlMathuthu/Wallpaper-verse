@@ -54,4 +54,4 @@ Best Android and IOS wallpaper application.
 
 I also have the admin app you must check from this link.
 
-[Link](https://github.com/KarlMathuthu/Wallpaper-verse-admin.git)
+[Admin Application](https://github.com/KarlMathuthu/Wallpaper-verse-admin.git)
