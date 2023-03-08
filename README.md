@@ -11,10 +11,17 @@ Best Android and IOS wallpaper application.
 
 ## Screenshots.
 
-<img src='assets/images/background_home.jpeg' height = '200'>
-<img src='assets/images/background_home.jpeg' height = '200'>
-<img src='assets/images/background_home.jpeg' height = '200'>
-<img src='assets/images/background_home.jpeg' height = '200'>
+<table>
+    <tr>
+        <td><img src='assets/images/background_home.jpeg' height = '200'></td><td><img src='assets/images/background_home.jpeg' height = '200'></td>
+    </tr>
+</table>
+
+<table>
+    <tr>
+        <td><img src='assets/images/background_home.jpeg' height = '200'></td><td><img src='assets/images/background_home.jpeg' height = '200'></td>
+    </tr>
+</table>
 
 ## Technologies used.
 
