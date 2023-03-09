@@ -4,11 +4,11 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 import 'package:wallpaper_verse/pages/categories/animals_page.dart';
 import 'package:wallpaper_verse/pages/categories/anime_page.dart';
 import 'package:wallpaper_verse/pages/categories/nature_page.dart';
 import 'package:wallpaper_verse/pages/categories/sport_cars.dart';
+import 'package:wallpaper_verse/pages/search_page.dart';
 import 'package:wallpaper_verse/widgets/container_widget.dart';
 import 'package:wallpaper_verse/widgets/item_container.dart';
 
@@ -38,34 +38,44 @@ class _HomePageState extends State<HomePage> {
       body: Column(
         children: [
           //Search bar
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 10),
-            child: Container(
-              height: 60,
-              width: double.infinity,
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(15),
-              ),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.only(left: 10),
-                    child: Text(
-                      'Find wallpaper...',
-                      style: TextStyle(fontSize: 16, color: Colors.grey),
+          GestureDetector(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => SearchPage(),
+                ),
+              );
+            },
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 10),
+              child: Container(
+                height: 60,
+                width: double.infinity,
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(15),
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.only(left: 10),
+                      child: Text(
+                        'Find wallpaper...',
+                        style: TextStyle(fontSize: 16, color: Colors.grey),
+                      ),
                     ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(right: 10),
-                    child: SvgPicture.asset(
-                      'assets/icons/search_icon.svg',
-                      color: Colors.grey,
-                      fit: BoxFit.none,
-                    ),
-                  )
-                ],
+                    Padding(
+                      padding: const EdgeInsets.only(right: 10),
+                      child: SvgPicture.asset(
+                        'assets/icons/search_icon.svg',
+                        color: Colors.grey,
+                        fit: BoxFit.none,
+                      ),
+                    )
+                  ],
+                ),
               ),
             ),
           ),
