@@ -11,7 +11,9 @@ Best Android and IOS wallpaper application.
 
 ## Screenshots.
 
-I will add some screenshots here.
+These are the screenshots for the app.
+
+<img src='screenshots/screenshot1.jpg'>
 
 ## Technologies used.
 
