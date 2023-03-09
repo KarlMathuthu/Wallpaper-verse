@@ -71,7 +71,6 @@ class _MainHomeState extends State<MainHome> {
     }
   }
 
-  
   @override
   void initState() {
     //Check permissions first.
@@ -97,6 +96,7 @@ class _MainHomeState extends State<MainHome> {
               icon: SvgPicture.asset(
                 'assets/icons/home_icon.svg',
                 fit: BoxFit.none,
+                color: Colors.black,
               ),
               activeIcon: SvgPicture.asset(
                 'assets/icons/home_icon.svg',
@@ -109,6 +109,7 @@ class _MainHomeState extends State<MainHome> {
               icon: SvgPicture.asset(
                 'assets/icons/bookmark_icon.svg',
                 fit: BoxFit.none,
+                color: Colors.black,
               ),
               activeIcon: SvgPicture.asset(
                 'assets/icons/bookmark_icon.svg',
@@ -121,6 +122,7 @@ class _MainHomeState extends State<MainHome> {
               icon: SvgPicture.asset(
                 'assets/icons/settings_icon.svg',
                 fit: BoxFit.none,
+                color: Colors.black,
               ),
               activeIcon: SvgPicture.asset(
                 'assets/icons/settings_icon.svg',
