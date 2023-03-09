@@ -8,6 +8,7 @@ Best Android and IOS wallpaper application.
 - Save image to gallery.
 - 4 Categories.
 - More than 20 wallpapers uploaded per day.
+- Search wallpapers.
 
 ## Screenshots.
 
@@ -40,7 +41,6 @@ These are the screenshots for the app.
 
 - Save wallpaper to bookmarks.
 - Dark mode feature.
-- Seach wallpaper.
 
 ## Admin Application.
 
