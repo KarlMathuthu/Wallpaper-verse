@@ -19,6 +19,7 @@ class _AnimePageState extends State<AnimePage> {
       backgroundColor: Colors.grey[200],
       appBar: AppBar(
         backgroundColor: Colors.grey[200],
+        scrolledUnderElevation: 0,
       ),
       body: Column(
         children: [
@@ -29,7 +30,7 @@ class _AnimePageState extends State<AnimePage> {
                 child: Text(
                   'Anime',
                   style: TextStyle(
-                    fontSize: 30,
+                    fontSize: 25,
                     color: Colors.black,
                     fontWeight: FontWeight.bold,
                   ),
@@ -51,7 +52,7 @@ class _AnimePageState extends State<AnimePage> {
                       return Text(
                         '${snapshot.data!.docs.length} wallpapers available',
                         style: TextStyle(
-                          fontSize: 18,
+                          fontSize: 16,
                           color: Colors.grey,
                         ),
                       );
@@ -60,7 +61,7 @@ class _AnimePageState extends State<AnimePage> {
                       return Text(
                         'No wallpapers available',
                         style: TextStyle(
-                          fontSize: 18,
+                          fontSize: 16,
                           color: Colors.grey,
                         ),
                       );
@@ -82,6 +83,7 @@ class _AnimePageState extends State<AnimePage> {
                       crossAxisCount: 2,
                       mainAxisSpacing: 6,
                       crossAxisSpacing: 6,
+                      physics: BouncingScrollPhysics(),
                       itemCount: snapshot.data!.docs.length,
                       itemBuilder: ((context, index) {
                         return GestureDetector(

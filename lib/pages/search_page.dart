@@ -34,8 +34,11 @@ class _SearchPageState extends State<SearchPage> {
       backgroundColor: Colors.grey[200],
       appBar: AppBar(
         backgroundColor: Colors.grey[200],
+        scrolledUnderElevation: 0,
         leading: IconButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pop(context);
+          },
           icon: Icon(Icons.arrow_back),
         ),
       ),
@@ -44,11 +47,11 @@ class _SearchPageState extends State<SearchPage> {
           Row(
             children: [
               Padding(
-                padding: const EdgeInsets.only(left: 10),
+                padding: const EdgeInsets.only(left: 15),
                 child: Text(
                   'Find wallpaper',
                   style: TextStyle(
-                    fontSize: 30,
+                    fontSize: 25,
                     color: Colors.black,
                     fontWeight: FontWeight.bold,
                   ),
@@ -56,10 +59,13 @@ class _SearchPageState extends State<SearchPage> {
               ),
             ],
           ),
+          SizedBox(
+            height: 20,
+          ),
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 10),
+            padding: const EdgeInsets.symmetric(horizontal: 15),
             child: Container(
-              height: 60,
+              height: 50,
               width: double.infinity,
               decoration: BoxDecoration(
                 color: Colors.white,
@@ -72,7 +78,12 @@ class _SearchPageState extends State<SearchPage> {
                     search_text = value;
                   });
                 },
-                decoration: InputDecoration(hintText: 'Search somthing...'),
+                decoration: InputDecoration(
+                  contentPadding: EdgeInsets.only(left: 10),
+                  hintText: 'Search something...',
+                  hintStyle: TextStyle(color: Colors.grey),
+                  border: InputBorder.none,
+                ),
               ),
             ),
           ),
@@ -96,6 +107,7 @@ class _SearchPageState extends State<SearchPage> {
                       crossAxisCount: 2,
                       mainAxisSpacing: 6,
                       crossAxisSpacing: 6,
+                      physics: BouncingScrollPhysics(),
                       itemCount: snapshot.data!.docs.length,
                       itemBuilder: ((context, index) {
                         var name = FirebaseFirestore.instance

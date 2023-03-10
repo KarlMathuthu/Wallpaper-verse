@@ -5,14 +5,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:wallpaper_verse/pages/image_preview.dart';
 
-class NaturePage extends StatefulWidget {
-  const NaturePage({super.key});
+class ExplorePage extends StatefulWidget {
+  const ExplorePage({super.key});
 
   @override
-  State<NaturePage> createState() => _NaturePageState();
+  State<ExplorePage> createState() => _ExplorePageState();
 }
 
-class _NaturePageState extends State<NaturePage> {
+class _ExplorePageState extends State<ExplorePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -28,7 +28,7 @@ class _NaturePageState extends State<NaturePage> {
               Padding(
                 padding: const EdgeInsets.only(left: 10),
                 child: Text(
-                  'Nature',
+                  'Explore',
                   style: TextStyle(
                     fontSize: 25,
                     color: Colors.black,
@@ -38,42 +38,28 @@ class _NaturePageState extends State<NaturePage> {
               ),
             ],
           ),
+          SizedBox(
+            height: 10,
+          ),
           Row(
             children: [
               Padding(
-                padding: const EdgeInsets.only(left: 10, bottom: 10),
-                child: StreamBuilder(
-                  stream: FirebaseFirestore.instance
-                      .collection('Nature')
-                      .snapshots(),
-                  builder: (context, snapshot) {
-                    if (snapshot.hasData) {
-                      //return text.
-                      return Text(
-                        '${snapshot.data!.docs.length} wallpapers available',
-                        style: TextStyle(
-                          fontSize: 16,
-                          color: Colors.grey,
-                        ),
-                      );
-                    } else {
-                      //return text with no wallpapers.
-                      return Text(
-                        'No wallpapers available',
-                        style: TextStyle(
-                          fontSize: 16,
-                          color: Colors.grey,
-                        ),
-                      );
-                    }
-                  },
+                padding: const EdgeInsets.only(left: 10),
+                child: Text(
+                  'Find more wallpapers',
+                  style: TextStyle(
+                    fontSize: 16,
+                    color: Colors.grey,
+                  ),
                 ),
               ),
             ],
           ),
           //Masonry GridView [from package].
           StreamBuilder(
-            stream: FirebaseFirestore.instance.collection('Nature').snapshots(),
+            stream: FirebaseFirestore.instance
+                .collection('All wallpapers')
+                .snapshots(),
             builder: ((context, snapshot) {
               if (snapshot.hasData) {
                 return Expanded(
@@ -83,6 +69,7 @@ class _NaturePageState extends State<NaturePage> {
                       crossAxisCount: 2,
                       mainAxisSpacing: 6,
                       crossAxisSpacing: 6,
+                      physics: BouncingScrollPhysics(),
                       itemCount: snapshot.data!.docs.length,
                       itemBuilder: ((context, index) {
                         return GestureDetector(

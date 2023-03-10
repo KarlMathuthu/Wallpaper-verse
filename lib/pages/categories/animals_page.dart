@@ -19,6 +19,7 @@ class _AnimalsPageState extends State<AnimalsPage> {
       backgroundColor: Colors.grey[200],
       appBar: AppBar(
         backgroundColor: Colors.grey[200],
+        scrolledUnderElevation: 0,
       ),
       body: Column(
         children: [
@@ -29,7 +30,7 @@ class _AnimalsPageState extends State<AnimalsPage> {
                 child: Text(
                   'Animals',
                   style: TextStyle(
-                    fontSize: 30,
+                    fontSize: 25,
                     color: Colors.black,
                     fontWeight: FontWeight.bold,
                   ),
@@ -51,7 +52,7 @@ class _AnimalsPageState extends State<AnimalsPage> {
                       return Text(
                         '${snapshot.data!.docs.length} wallpapers available',
                         style: TextStyle(
-                          fontSize: 18,
+                          fontSize: 16,
                           color: Colors.grey,
                         ),
                       );
@@ -60,7 +61,7 @@ class _AnimalsPageState extends State<AnimalsPage> {
                       return Text(
                         'No wallpapers available',
                         style: TextStyle(
-                          fontSize: 18,
+                          fontSize: 16,
                           color: Colors.grey,
                         ),
                       );
@@ -83,6 +84,7 @@ class _AnimalsPageState extends State<AnimalsPage> {
                       crossAxisCount: 2,
                       mainAxisSpacing: 6,
                       crossAxisSpacing: 6,
+                      physics: BouncingScrollPhysics(),
                       itemCount: snapshot.data!.docs.length,
                       itemBuilder: ((context, index) {
                         return GestureDetector(

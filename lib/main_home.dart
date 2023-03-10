@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:wallpaper_verse/pages/bookmarks_page.dart';
+import 'package:wallpaper_verse/pages/explore_page.dart';
 import 'package:wallpaper_verse/pages/home_page.dart';
 import 'package:wallpaper_verse/pages/settings_page.dart';
 import 'package:permission_handler/permission_handler.dart';
@@ -24,7 +24,7 @@ class _MainHomeState extends State<MainHome> {
 
   final List _pages = [
     HomePage(),
-    BookMarksPage(),
+    ExplorePage(),
     SettingsPage(),
   ];
   //Ask permissions [package:permission_handler]
@@ -99,7 +99,7 @@ class _MainHomeState extends State<MainHome> {
                 color: Colors.black,
               ),
               activeIcon: SvgPicture.asset(
-                'assets/icons/home_icon.svg',
+                'assets/icons/active_home.svg',
                 fit: BoxFit.none,
                 color: Colors.lightBlue,
               ),
@@ -107,16 +107,16 @@ class _MainHomeState extends State<MainHome> {
           //Downloads item
           BottomNavigationBarItem(
               icon: SvgPicture.asset(
-                'assets/icons/bookmark_icon.svg',
+                'assets/icons/explore.svg',
                 fit: BoxFit.none,
                 color: Colors.black,
               ),
               activeIcon: SvgPicture.asset(
-                'assets/icons/bookmark_icon.svg',
+                'assets/icons/active_explore.svg',
                 fit: BoxFit.none,
                 color: Colors.lightBlue,
               ),
-              label: 'Downloads'),
+              label: 'Explore'),
           //Settings Item
           BottomNavigationBarItem(
               icon: SvgPicture.asset(
@@ -125,7 +125,7 @@ class _MainHomeState extends State<MainHome> {
                 color: Colors.black,
               ),
               activeIcon: SvgPicture.asset(
-                'assets/icons/settings_icon.svg',
+                'assets/icons/active_settings.svg',
                 fit: BoxFit.none,
                 color: Colors.lightBlue,
               ),

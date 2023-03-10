@@ -1,12 +1,9 @@
 // ignore_for_file: prefer_const_constructors
 
-import 'package:dio/dio.dart';
-import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:gallery_saver/gallery_saver.dart';
-import 'package:path_provider/path_provider.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 import 'package:wallpaper_verse/widgets/loader.dart';
 
 class ImagePreviewer extends StatefulWidget {
@@ -21,34 +18,29 @@ class ImagePreviewer extends StatefulWidget {
 }
 
 class _ImagePreviewerState extends State<ImagePreviewer> {
-  final CustomLoader _loader = CustomLoader();
-  double downloadProgress = 0;
-
   downloadImage() async {
-    /*final tempDir = await getTemporaryDirectory();
-    final path = '${tempDir.path}/${widget.imageUrl}';
-
-    await Dio().download(
-      widget.imageUrl,
-      path,
-      onReceiveProgress: (count, total) {
-        double progress = count / total;
-        setState(() {
-          downloadProgress = progress;
-          print(progress);
-        });
-      },
-    );*/
-
     try {
       await GallerySaver.saveImage(widget.imageUrl,
           toDcim: true, albumName: 'Wallpaper-verse');
     } catch (e) {
-      //OnError show snackbar.
-      print('Failed to download.');
+      Fluttertoast.showToast(
+          msg: "Failed to download.",
+          toastLength: Toast.LENGTH_SHORT,
+          gravity: ToastGravity.CENTER,
+          timeInSecForIosWeb: 1,
+          backgroundColor: Colors.red,
+          textColor: Colors.white,
+          fontSize: 16.0);
     }
-    //OnComplete show snackbar.
-    print('Downloaded.');
+
+    Fluttertoast.showToast(
+        msg: "Wallaper downloaded",
+        toastLength: Toast.LENGTH_SHORT,
+        gravity: ToastGravity.CENTER,
+        timeInSecForIosWeb: 1,
+        backgroundColor: Colors.green,
+        textColor: Colors.white,
+        fontSize: 16.0);
   }
 
   @override

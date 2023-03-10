@@ -28,13 +28,16 @@ class _SettingsPageState extends State<SettingsPage> {
                 child: Text(
                   'Settings',
                   style: TextStyle(
-                    fontSize: 30,
+                    fontSize: 25,
                     color: Colors.black,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
               ),
             ],
+          ),
+          SizedBox(
+            height: 10,
           ),
           Row(
             children: [
@@ -43,7 +46,7 @@ class _SettingsPageState extends State<SettingsPage> {
                 child: Text(
                   'App version 1.0',
                   style: TextStyle(
-                    fontSize: 18,
+                    fontSize: 16,
                     color: Colors.grey,
                   ),
                 ),
@@ -85,6 +88,62 @@ class _SettingsPageState extends State<SettingsPage> {
                             });
                           },
                         )
+                      ],
+                    ),
+                  ),
+                ),
+                //Privacy Policy
+                Padding(
+                  padding: const EdgeInsets.only(top: 10, left: 10, right: 10),
+                  child: Container(
+                    height: 60,
+                    width: double.infinity,
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.only(left: 10),
+                          child: Text(
+                            'Privacy Policy',
+                            style: TextStyle(
+                              fontSize: 16,
+                              color: Colors.black,
+                            ),
+                          ),
+                        ),
+                        Icon(Icons.arrow_forward_ios)
+                      ],
+                    ),
+                  ),
+                ),
+                //T and Cs
+                Padding(
+                  padding: const EdgeInsets.only(top: 10, left: 10, right: 10),
+                  child: Container(
+                    height: 60,
+                    width: double.infinity,
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.only(left: 10),
+                          child: Text(
+                            'Terms and Conditions',
+                            style: TextStyle(
+                              fontSize: 16,
+                              color: Colors.black,
+                            ),
+                          ),
+                        ),
+                        Icon(Icons.arrow_forward_ios)
                       ],
                     ),
                   ),

@@ -21,7 +21,7 @@ class ContainerWidget extends StatelessWidget {
           borderRadius: BorderRadius.circular(25),
           child: Image.network(
             imageUrl, fit: BoxFit.cover,
-            //onloading return shimmer.
+            //loading builder return shimmer.
             loadingBuilder: (BuildContext context, Widget child,
                 ImageChunkEvent? loadingProgress) {
               if (loadingProgress == null) return child;

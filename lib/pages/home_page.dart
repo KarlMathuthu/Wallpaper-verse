@@ -48,9 +48,9 @@ class _HomePageState extends State<HomePage> {
               );
             },
             child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 10),
+              padding: const EdgeInsets.symmetric(horizontal: 15),
               child: Container(
-                height: 60,
+                height: 50,
                 width: double.infinity,
                 decoration: BoxDecoration(
                   color: Colors.white,
@@ -83,11 +83,11 @@ class _HomePageState extends State<HomePage> {
           Row(
             children: [
               Padding(
-                padding: const EdgeInsets.only(left: 10, top: 20, bottom: 20),
+                padding: const EdgeInsets.only(left: 15, top: 20, bottom: 20),
                 child: Text(
                   'Best of the month',
                   style: TextStyle(
-                    fontSize: 18,
+                    fontSize: 16,
                     color: Colors.black,
                     fontWeight: FontWeight.bold,
                   ),
@@ -129,11 +129,11 @@ class _HomePageState extends State<HomePage> {
           Row(
             children: [
               Padding(
-                padding: const EdgeInsets.only(left: 10, top: 20),
+                padding: const EdgeInsets.only(left: 15, top: 20, bottom: 20),
                 child: Text(
                   'Categories',
                   style: TextStyle(
-                    fontSize: 18,
+                    fontSize: 16,
                     color: Colors.black,
                     fontWeight: FontWeight.bold,
                   ),
@@ -144,73 +144,79 @@ class _HomePageState extends State<HomePage> {
           //I did not use gridview because it does not allow custom height and width.
           //Categories rows.
           //first row.
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              //item one.
-              ItemContainer(
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => NaturePage(),
-                    ),
-                  );
-                },
-                title: 'Nature',
-                imageUrl:
-                    'https://firebasestorage.googleapis.com/v0/b/wallpaper-verse.appspot.com/o/Categories%20Images%2Fnature.jpg?alt=media&token=f00a7dea-6e4f-439a-b324-c4a000122c7d',
-              ),
-              //item two.
-              ItemContainer(
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => SportCarsPage(),
-                    ),
-                  );
-                },
-                title: 'Sport Cars',
-                imageUrl:
-                    'https://firebasestorage.googleapis.com/v0/b/wallpaper-verse.appspot.com/o/Categories%20Images%2Fsport%20car.jpg?alt=media&token=0e332cea-b9cc-4f1c-ae0a-e1c4ad3c7cd0',
-              ),
-            ],
+          Padding(
+            padding: const EdgeInsets.only(left: 8, right: 8),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                //item one.
+                ItemContainer(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => NaturePage(),
+                      ),
+                    );
+                  },
+                  title: 'Nature',
+                  imageUrl:
+                      'https://firebasestorage.googleapis.com/v0/b/wallpaper-verse.appspot.com/o/Categories%20Images%2Fnature.jpg?alt=media&token=f00a7dea-6e4f-439a-b324-c4a000122c7d',
+                ),
+                //item two.
+                ItemContainer(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => SportCarsPage(),
+                      ),
+                    );
+                  },
+                  title: 'Sport Cars',
+                  imageUrl:
+                      'https://firebasestorage.googleapis.com/v0/b/wallpaper-verse.appspot.com/o/Categories%20Images%2Fsport%20car.jpg?alt=media&token=0e332cea-b9cc-4f1c-ae0a-e1c4ad3c7cd0',
+                ),
+              ],
+            ),
           ),
           //second row.
 
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              //item one.
-              ItemContainer(
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => AnimalsPage(),
-                    ),
-                  );
-                },
-                title: 'Animals',
-                imageUrl:
-                    'https://firebasestorage.googleapis.com/v0/b/wallpaper-verse.appspot.com/o/Categories%20Images%2Fanimal.jpg?alt=media&token=a97ca88d-5cae-4557-a8ac-8161f90e128f',
-              ),
-              //item two.
-              ItemContainer(
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => AnimePage(),
-                    ),
-                  );
-                },
-                title: 'Anime',
-                imageUrl:
-                    'https://firebasestorage.googleapis.com/v0/b/wallpaper-verse.appspot.com/o/Categories%20Images%2Fanime.jpg?alt=media&token=654c0510-ac74-4cf0-9261-ce74b50e69dc',
-              ),
-            ],
+          Padding(
+            padding: const EdgeInsets.only(left: 8, right: 8),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                //item one.
+                ItemContainer(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => AnimalsPage(),
+                      ),
+                    );
+                  },
+                  title: 'Animals',
+                  imageUrl:
+                      'https://firebasestorage.googleapis.com/v0/b/wallpaper-verse.appspot.com/o/Categories%20Images%2Fanimal.jpg?alt=media&token=a97ca88d-5cae-4557-a8ac-8161f90e128f',
+                ),
+                //item two.
+                ItemContainer(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => AnimePage(),
+                      ),
+                    );
+                  },
+                  title: 'Anime',
+                  imageUrl:
+                      'https://firebasestorage.googleapis.com/v0/b/wallpaper-verse.appspot.com/o/Categories%20Images%2Fanime.jpg?alt=media&token=654c0510-ac74-4cf0-9261-ce74b50e69dc',
+                ),
+              ],
+            ),
           )
         ],
       ),
