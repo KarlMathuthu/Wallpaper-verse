@@ -1,3 +1,5 @@
+<img src = 'assets/app_icon/app_icon.png' height = '100'>
+
 # Wallpaper Verse Application.
 
 Best Android and IOS wallpaper application.
@@ -29,13 +31,10 @@ These are the screenshots for the app.
 - flutter_svg: ^1.1.6
 - firebase_core: ^2.7.0
 - permission_handler: ^10.2.0
-- shared_preferences: ^2.0.18
-- path_provider: ^2.0.13
 - gallery_saver: ^2.3.2
 - carousel_slider: ^4.2.1
 - shimmer: ^2.0.0
-- dio: ^5.0.1
-- provider: ^6.0.5
+- fluttertoast: ^8.2.1
 
 ## Upcoming Features.
 
@@ -47,3 +46,7 @@ These are the screenshots for the app.
 I also have the admin app you must check from this link.
 
 [Admin Application](https://github.com/KarlMathuthu/Wallpaper-verse-admin.git)
+
+## Developer
+
+Made with ❤ by Karl Mathuthu.
