@@ -1,5 +1,3 @@
-<img src = 'assets/app_icon/app_icon.png' height = '100'>
-
 # Wallpaper Verse Application.
 
 Best Android and IOS wallpaper application.
