@@ -43,7 +43,7 @@ These are the screenshots for the app.
 
 ## Admin Application.
 
-I also have the admin app you must check from this link.
+I also made the admin app you must check from this link.
 
 [Admin Application](https://github.com/KarlMathuthu/Wallpaper-verse-admin.git)
 
