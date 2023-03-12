@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:gallery_saver/gallery_saver.dart';
-import 'package:wallpaper_verse/widgets/loader.dart';
 
 class ImagePreviewer extends StatefulWidget {
   final String imageUrl;
@@ -64,31 +63,27 @@ class _ImagePreviewerState extends State<ImagePreviewer> {
           ),
           Align(
             alignment: Alignment.bottomCenter,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                IconButton(
-                  onPressed: () {},
-                  icon: SvgPicture.asset(
-                    'assets/icons/bookmark_icon.svg',
-                    color: Colors.white,
-                    fit: BoxFit.none,
+            child: GestureDetector(
+              onTap: () {
+                downloadImage();
+              },
+              child: Container(
+                height: 50,
+                width: 200,
+                decoration: BoxDecoration(
+                  color: Colors.lightBlue,
+                  borderRadius: BorderRadius.circular(15),
+                ),
+                child: Center(
+                  child: Text(
+                    'Download',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 16,
+                    ),
                   ),
                 ),
-                SizedBox(
-                  width: 50,
-                ),
-                IconButton(
-                  onPressed: () {
-                    downloadImage();
-                  },
-                  icon: SvgPicture.asset(
-                    'assets/icons/downloads_icon.svg',
-                    color: Colors.white,
-                    fit: BoxFit.none,
-                  ),
-                )
-              ],
+              ),
             ),
           ),
         ],

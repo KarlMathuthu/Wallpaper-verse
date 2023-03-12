@@ -98,7 +98,7 @@ class _HomePageState extends State<HomePage> {
           //Stream Builder.
           StreamBuilder(
             stream: FirebaseFirestore.instance
-                .collection('Slider images')
+                .collection('All wallpapers')
                 .snapshots(),
             builder: ((context, snapshot) {
               if (snapshot.hasData) {

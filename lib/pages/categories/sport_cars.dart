@@ -44,7 +44,7 @@ class _SportCarsPageState extends State<SportCarsPage> {
                 padding: const EdgeInsets.only(left: 10),
                 child: StreamBuilder(
                   stream: FirebaseFirestore.instance
-                      .collection('Sport cars')
+                      .collection('Sport car')
                       .snapshots(),
                   builder: (context, snapshot) {
                     if (snapshot.hasData) {
@@ -74,7 +74,7 @@ class _SportCarsPageState extends State<SportCarsPage> {
           //Masonry GridView [from package].
           StreamBuilder(
             stream:
-                FirebaseFirestore.instance.collection('Sport cars').snapshots(),
+                FirebaseFirestore.instance.collection('Sport car').snapshots(),
             builder: ((context, snapshot) {
               if (snapshot.hasData) {
                 return Expanded(

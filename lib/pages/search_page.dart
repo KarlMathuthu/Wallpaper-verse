@@ -110,11 +110,9 @@ class _SearchPageState extends State<SearchPage> {
                       physics: BouncingScrollPhysics(),
                       itemCount: snapshot.data!.docs.length,
                       itemBuilder: ((context, index) {
-                        var name = FirebaseFirestore.instance
-                            .collection('All wallpapers')
-                            .get() as Map<String, dynamic>;
+                        var name = snapshot.data!.docs[index]['name'];
 
-                        if (name['name']
+                        if (name
                             .toString()
                             .toLowerCase()
                             .contains(search_text)) {
