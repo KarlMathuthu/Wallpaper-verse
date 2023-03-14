@@ -1,5 +1,7 @@
 # Wallpaper Verse Application.
 
+<img src= "assets/app_icon/app_icon.png" height = "60">
+
 Best Android and IOS wallpaper application.
 
 ## Features.
