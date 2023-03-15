@@ -2,6 +2,7 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 
 class SettingsPage extends StatefulWidget {
   const SettingsPage({super.key});
@@ -152,11 +153,49 @@ class _SettingsPageState extends State<SettingsPage> {
                 //About section.
                 GestureDetector(
                   onTap: () {
-                    showAboutDialog(
-                        context: context,
-                        applicationName: 'Wallpaper verse',
-                        applicationLegalese:
-                            'Wallpaper verse is an open source application on Github built by Karl Mathuthu.');
+                    showDialog(
+                      context: context,
+                      builder: ((context) {
+                        return Dialog(
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(20),
+                            child: Container(
+                              height: 140,
+                              color: Colors.white,
+                              padding: EdgeInsets.all(16.0),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Row(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      Text(
+                                        'About Wallpaper verse',
+                                        style: TextStyle(
+                                          fontSize: 18,
+                                          fontWeight: FontWeight.bold,
+                                          color: Colors.black,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                  SizedBox(
+                                    height: 10,
+                                  ),
+                                  Text(
+                                    'Wallpaper verse is an open source application on Github which was developed by Karl Mathuthu.If you are a developer and you would like to contribute,Please email me right away at Karlmathuthu11@gmail.com.Thank you fot using my App.',
+                                    style: TextStyle(
+                                      fontSize: 16,
+                                      color: Colors.black,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+                        );
+                      }),
+                    );
                   },
                   child: Padding(
                     padding:

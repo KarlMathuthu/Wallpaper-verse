@@ -6,7 +6,7 @@
         android:requestLegacyExternalStorage="true"
         android:label="Wallpaper Verse"
         android:name="${applicationName}"
-        android:icon="@mipmap/ic_launcher">
+        android:icon="@mipmap/launcher_icon">
         <activity
             android:name=".MainActivity"
             android:exported="true"

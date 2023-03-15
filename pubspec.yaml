@@ -46,19 +46,19 @@ dependencies:
   carousel_slider: ^4.2.1
   shimmer: ^2.0.0
   fluttertoast: ^8.2.1
+  firebase_analytics: ^10.1.5
 
 
 dev_dependencies:
-  flutter_launcher_icons: ^0.12.0
+  
+  flutter_test:
+    sdk: flutter
+  flutter_launcher_icons: ^0.12.0  
 
-  flutter_icons:
+flutter_icons:
   android: "launcher_icon"
   ios: true
   image_path: "assets/app_icon/app_icon.png"
-  min_sdk_android: 21
-
-  flutter_test:
-    sdk: flutter
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
@@ -96,11 +96,12 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
-  # fonts:
-  #   - family: Schyler
-  #     fonts:
-  #       - asset: fonts/Schyler-Regular.ttf
-  #       - asset: fonts/Schyler-Italic.ttf
+  fonts:
+      - family: Poppins
+        fonts:
+         - asset: assets/fonts/Poppins-Black.ttf
+         - asset: assets/fonts/Poppins-Bold.ttf
+         - asset: assets/fonts/Poppins-Regular.ttf
   #         style: italic
   #   - family: Trajan Pro
   #     fonts:
