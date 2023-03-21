@@ -21,25 +21,27 @@ class _ImagePreviewerState extends State<ImagePreviewer> {
     try {
       await GallerySaver.saveImage(widget.imageUrl,
           toDcim: true, albumName: 'Wallpaper-verse');
-    } catch (e) {
-      Fluttertoast.showToast(
-          msg: "Failed to download.",
-          toastLength: Toast.LENGTH_SHORT,
-          gravity: ToastGravity.CENTER,
-          timeInSecForIosWeb: 1,
-          backgroundColor: Colors.red,
-          textColor: Colors.white,
-          fontSize: 16.0);
-    }
 
-    Fluttertoast.showToast(
+      Fluttertoast.showToast(
         msg: "Wallaper downloaded",
         toastLength: Toast.LENGTH_SHORT,
-        gravity: ToastGravity.CENTER,
+        gravity: ToastGravity.BOTTOM,
         timeInSecForIosWeb: 1,
         backgroundColor: Colors.green,
         textColor: Colors.white,
-        fontSize: 16.0);
+        fontSize: 16.0,
+      );
+    } catch (e) {
+      Fluttertoast.showToast(
+        msg: e.toString(),
+        toastLength: Toast.LENGTH_SHORT,
+        gravity: ToastGravity.BOTTOM,
+        timeInSecForIosWeb: 1,
+        backgroundColor: Colors.red,
+        textColor: Colors.white,
+        fontSize: 16.0,
+      );
+    }
   }
 
   @override

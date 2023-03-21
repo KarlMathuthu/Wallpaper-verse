@@ -47,6 +47,8 @@ dependencies:
   shimmer: ^2.0.0
   fluttertoast: ^8.2.1
   firebase_analytics: ^10.1.5
+  provider: ^6.0.5
+  shared_preferences: ^2.0.18
 
 
 dev_dependencies:
