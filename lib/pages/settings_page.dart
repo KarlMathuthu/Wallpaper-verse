@@ -2,7 +2,6 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:fluttertoast/fluttertoast.dart';
 import 'package:provider/provider.dart';
 import 'package:wallpaper_verse/theme/model.dart';
 import 'package:wallpaper_verse/theme/theme_colors.dart';
@@ -53,7 +52,7 @@ class _SettingsPageState extends State<SettingsPage> {
                   Padding(
                     padding: const EdgeInsets.only(left: 10),
                     child: Text(
-                      'Made with ❤ by Karl Mathuthu',
+                      '1.1.0',
                       style: TextStyle(
                         fontSize: 16,
                         color: Colors.grey,

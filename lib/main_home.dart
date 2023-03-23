@@ -94,8 +94,8 @@ class _MainHomeState extends State<MainHome> {
             showSelectedLabels: false,
             showUnselectedLabels: false,
             backgroundColor: themeNotifier.isDark
-                ? DarkTheme().scafforldColor
-                : LightTheme().scafforldColor,
+                ? DarkTheme().bottomNavColor
+                : LightTheme().bottomNavColor,
             onTap: onPageChange,
             items: [
               //Home item
