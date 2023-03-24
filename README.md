@@ -20,7 +20,7 @@ Best Android and IOS wallpaper application.
 
 ## Screenshots.
 
-These are the screenshots for the app.
+Checkout these screenshots.
 
 <img src='screenshots/main_pic.png'>
 
@@ -45,6 +45,11 @@ These are the screenshots for the app.
  - firebase_analytics: ^10.1.5
  - provider: ^6.0.5
  - shared_preferences: ^2.0.18
+
+
+## State Management
+
+For the state managemnt i used provider and i guess it's the best.
 
 ## Contributing 
 
