@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class LightTheme {
-  var scafforldColor = Colors.white;
+  var scafforldColor = Colors.grey[200];
   var buttonColor = Colors.blue;
   var bottomNavColor = Colors.white;
   var iconColor = Colors.black;

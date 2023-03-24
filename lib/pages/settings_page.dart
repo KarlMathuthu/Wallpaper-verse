@@ -52,7 +52,7 @@ class _SettingsPageState extends State<SettingsPage> {
                   Padding(
                     padding: const EdgeInsets.only(left: 10),
                     child: Text(
-                      '1.1.0',
+                      'Version 1.1.0',
                       style: TextStyle(
                         fontSize: 16,
                         color: Colors.grey,

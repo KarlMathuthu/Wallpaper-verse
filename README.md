@@ -22,9 +22,8 @@ Best Android and IOS wallpaper application.
 
 These are the screenshots for the app.
 
-<img src='screenshots/first_image.jpg'>
-<img src='screenshots/sec_image.jpg'>
-<img src='screenshots/third_image.jpg'>
+<img src='screenshots/main_pic.png'>
+
 
 ## Technologies used.
 
