@@ -39,7 +39,7 @@ class ContainerWidget extends StatelessWidget {
             //error loading!
             errorBuilder: (context, error, stackTrace) {
               return Container(
-                height: 120,
+                height: 200,
                 width: 200,
                 color: Colors.lightBlue,
                 alignment: Alignment.center,

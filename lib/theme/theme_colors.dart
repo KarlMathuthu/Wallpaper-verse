@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 
 class LightTheme {
   var scafforldColor = Colors.white;
-  var buttonColor = Colors.lightBlue;
+  var buttonColor = Colors.blue;
   var bottomNavColor = Colors.white;
   var iconColor = Colors.black;
-  var activeIconColor = Colors.lightBlue;
+  var activeIconColor = Colors.blue;
 }
 
 class DarkTheme {
@@ -13,5 +13,5 @@ class DarkTheme {
   var buttonColor = Colors.blue;
   var bottomNavColor = Color.fromARGB(255, 64, 75, 105);
   var iconColor = Colors.white;
-  var activeIconColor = Colors.lightBlue;
+  var activeIconColor = Colors.blue;
 }
