@@ -30,56 +30,6 @@ class _MainHomeState extends State<MainHome> {
     ExplorePage(),
     SettingsPage(),
   ];
-  //Ask permissions [package:permission_handler]
-  checkPermissions() async {
-    //Permissions
-    var manageExternalStorage = await Permission.manageExternalStorage.status;
-    var storage = await Permission.storage.status;
-    var photos = Permission.photos;
-
-    //Check if its allowed.
-
-    if (manageExternalStorage.isDenied) {
-      //Ask permission.
-      Map<Permission, PermissionStatus> statuses = await [
-        Permission.manageExternalStorage,
-      ].request();
-    } else if (storage.isDenied) {
-      //Ask permission.
-      Map<Permission, PermissionStatus> statuses = await [
-        Permission.storage,
-      ].request();
-    } else if (await photos.isDenied) {
-      //Ask permission.
-      Map<Permission, PermissionStatus> statuses = await [
-        Permission.photos,
-      ].request();
-    } else if (manageExternalStorage.isRestricted) {
-      //Ask permission.
-      Map<Permission, PermissionStatus> statuses = await [
-        Permission.manageExternalStorage,
-      ].request();
-    } else if (storage.isRestricted) {
-      //Ask permission
-      Map<Permission, PermissionStatus> statuses = await [
-        Permission.storage,
-      ].request();
-    } else if (await photos.isRestricted) {
-      //Ask permission.
-      Map<Permission, PermissionStatus> statuses = await [
-        Permission.photos,
-      ].request();
-    } else {
-      //Return nothing.
-    }
-  }
-
-  @override
-  void initState() {
-    //Check permissions first.
-    checkPermissions();
-    super.initState();
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -110,7 +60,7 @@ class _MainHomeState extends State<MainHome> {
                   activeIcon: SvgPicture.asset(
                     'assets/icons/active_home.svg',
                     fit: BoxFit.none,
-                    color: Colors.lightBlue,
+                    color: Colors.blue,
                   ),
                   label: 'Home'),
               //Downloads item

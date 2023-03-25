@@ -22,7 +22,7 @@ Best Android and IOS wallpaper application.
 
 Checkout these screenshots.
 
-<img src='screenshots/main_pic.png'>
+<img src='screenshots/main_screen.jpg'>
 
 
 ## Technologies used.
